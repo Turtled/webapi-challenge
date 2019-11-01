@@ -12,3 +12,7 @@ I need this code, just don't know where, perhaps should make some middleware, do
 
 Go code!
 */
+port = parseInt(process.env.PORT, 10) || 8080;
+const server = require('./server');
+
+server.listen(port, () => console.log('API running on port ' + port));

@@ -26,13 +26,24 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+    I learned about Express routing
+    I also learned about how Express, essentially middleware itself, allows other middleware to be applied to itself with, for example, `server.use(middleware)`, or `router.get('route', middleware`
+
 - [ ] Describe Middleware?
+
+    Middleware is just code that sits between other code, possibly making some change before passing on the data. In express, middleware can be abbplied to specific routes (for example, you could have middleware on a route that verifies the correct data was sent), or to the server as a whole, in which ANY request made to the server will pass through the middleware.
 
 - [ ] Describe a Resource?
 
+    A Resource is an idea in REST that basically just means that any piece of data the server shares with the client is a resource, and can be accessed by a unique URI
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+    The API can return a successful status code.
+
 - [ ] How can we partition our application into sub-applications?
+
+    We can do this by seperating our routes into other files, importing express.Router to that file, adding the routes to that, and then `server.use('/some/base/URL', ourNewRoutingFile)`
 
 ## Project Setup
 
